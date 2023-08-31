@@ -1,5 +1,6 @@
 package next.school.cesar.desafiospring.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,7 +32,8 @@ public class House {
     private String zipcode;
 
     @ManyToOne
-//    @JoinColumn(name = "id", referencedColumnName = "id")
+    @JoinColumn(name="client_id", nullable = false)
+    @JsonBackReference
     private Client client;
 
 }

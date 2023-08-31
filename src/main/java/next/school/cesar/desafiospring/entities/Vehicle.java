@@ -1,5 +1,6 @@
 package next.school.cesar.desafiospring.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,7 +29,8 @@ public class Vehicle {
     private int year;
 
     @ManyToOne
-//    @JoinColumn(name = "id", referencedColumnName = "id")
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    @JsonBackReference
     private Client client;
 
 }

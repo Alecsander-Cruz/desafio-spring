@@ -1,5 +1,6 @@
 package next.school.cesar.desafiospring.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,14 +32,13 @@ public class Insurance {
 
     private String observation;
 
-    @Column(nullable = false)
     private Date createdAt;
 
-    @Column(nullable = false)
     private Date updatedAt;
 
     @ManyToOne
-    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    @JoinColumn(name="client_id", nullable = false)
+    @JsonBackReference
     private Client client;
 
 }

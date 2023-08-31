@@ -8,6 +8,7 @@ public class EntityRegisterResponse<T> {
     private int statusProcessamento = STATUS_OK;
     private String mensagemErro = null;
     private T entidade;
+
     public EntityRegisterResponse(int statusProcessamento, String mensagemErro) {
         super();
         this.mensagemErro = mensagemErro;
