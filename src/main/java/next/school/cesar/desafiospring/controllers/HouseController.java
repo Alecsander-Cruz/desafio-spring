@@ -45,7 +45,7 @@ public class HouseController {
         if(houseToBeUpdated == null){
             return new ResponseEntity<EntityRegisterResponse<House>>(
                     new EntityRegisterResponse<House>(EntityRegisterResponse.STATUS_ENTIDADE_NAO_ENCONTRADA, "Casa não encontrado!"),
-                    HttpStatus.NOT_FOUND
+                    HttpStatus.NO_CONTENT
             );
         }
         else{
@@ -76,7 +76,7 @@ public class HouseController {
     public ResponseEntity<House> deleteHouseById(@PathVariable(value = "id") long id){
         House res = houseMediator.getHouseById(id);
         if(res == null){
-            return new ResponseEntity<House>(res, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<House>(res, HttpStatus.NO_CONTENT);
         }
         houseMediator.delete(res);
         return new ResponseEntity<House>(res, HttpStatus.OK);
