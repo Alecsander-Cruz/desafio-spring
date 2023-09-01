@@ -51,7 +51,7 @@ public class HouseMediator {
         houseDao.delete(house);
     }
 
-    // Client Specifications validation
+    // House Specifications validation
     private String verifyHouseData(House house){
 
         // ownership_satus validation
@@ -72,11 +72,6 @@ public class HouseMediator {
         if(house.getZipcode() == null || house.getZipcode().isEmpty()){
             return "CEP não pode ser nulo!";
         }
-
-        //client_id validation
-//        if(house.getClient().getId() < 1){
-//            return "Id do cliente não pode ser zero ou negativo!";
-//        }
 
         return null;
     }
