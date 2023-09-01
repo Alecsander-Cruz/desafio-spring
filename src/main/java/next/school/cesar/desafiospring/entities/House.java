@@ -32,7 +32,7 @@ public class House {
     private String zipcode;
 
     @ManyToOne
-    @JoinColumn(name="client_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name="client_id", nullable = false)
     @JsonBackReference
     private Client client;
 
