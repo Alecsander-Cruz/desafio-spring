@@ -43,7 +43,4 @@ public class ClientDao {
         clientRepository.delete(client);
     }
 
-
-
-
 }

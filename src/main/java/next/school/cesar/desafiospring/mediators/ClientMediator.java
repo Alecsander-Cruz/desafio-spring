@@ -92,7 +92,8 @@ public class ClientMediator {
         if(client.getMarital_status() == null){
             return "Estado civil não encontrado!";
         }
-        if(!client.getMarital_status().equalsIgnoreCase("single") && !client.getMarital_status().equalsIgnoreCase("married")){
+        if(!client.getMarital_status().equalsIgnoreCase("single")
+                && !client.getMarital_status().equalsIgnoreCase("married")){
             return "Estado civil diferente de 'single' ou 'married'";
         }
 

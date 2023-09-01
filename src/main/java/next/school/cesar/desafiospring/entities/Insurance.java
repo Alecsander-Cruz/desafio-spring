@@ -32,12 +32,14 @@ public class Insurance {
 
     private String observation;
 
+//    @Column(nullable = false)
     private Date createdAt;
 
-    private Date updatedAt;
+//    @Column(nullable = false)
+    private Date validatedAt;
 
     @ManyToOne
-    @JoinColumn(name="client_id", nullable = false)
+    @JoinColumn(name="client_id", referencedColumnName = "id", nullable = false)
     @JsonBackReference
     private Client client;
 

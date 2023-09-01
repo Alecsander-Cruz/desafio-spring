@@ -65,9 +65,6 @@ public class ClientController {
             clientToBeUpdated.setDependents(client.getDependents());
             clientToBeUpdated.setIncome(client.getIncome());
             clientToBeUpdated.setMarital_status(client.getMarital_status());
-            clientToBeUpdated.setVehicles(client.getVehicles());
-            clientToBeUpdated.setHouses(client.getHouses());
-            clientToBeUpdated.setInsurances(client.getInsurances());
 
             String res = clientMediator.update(clientToBeUpdated);
             if(res == null){
